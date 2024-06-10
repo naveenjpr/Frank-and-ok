@@ -3,3 +3,12 @@
 @tailwind utilities;
 
 
+@layer utilities {
+  .content-auto {
+    background-image: url("../../public/banner.webp");
+  
+  width: 100%;
+  }
+}
+
+

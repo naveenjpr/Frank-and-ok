@@ -1,6 +1,8 @@
 import { FaRegUserCircle } from "react-icons/fa"
 import { FaHeart } from "react-icons/fa"
 import { CiShoppingCart } from "react-icons/ci"
+import Image from "next/image"
+import image1 from "../../../public/featureCate1.jpg"
 
 import { CiSearch } from "react-icons/ci"
 
@@ -45,15 +47,10 @@ export const categories2 = [
   "Matching Sets",
   "Sweaters & Cardigans",
   "Blazers & Overshirts",
-  "Jackets & Coats"
-];
-
-export const categories3 = [
-    "Shop All",
-    "Caps & Hats",
-    "Shoes & Boots",
-    "Bags"
+  "Jackets & Coats",
 ]
+
+export const categories3 = ["Shop All", "Caps & Hats", "Shoes & Boots", "Bags"]
 
 export const categories4 = [
   "Shop All",
@@ -63,7 +60,7 @@ export const categories4 = [
   "Shorts",
   "Swimwear",
   "Pants",
-  "Jackets"
+  "Jackets",
 ]
 
 export const categories5 = [
@@ -74,5 +71,8 @@ export const categories5 = [
   "Swimwear",
   "Pants",
   "Sweaters",
-  "Jackets"
+  "Jackets",
 ]
+
+
+
