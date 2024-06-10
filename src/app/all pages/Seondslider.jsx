@@ -50,7 +50,7 @@ export default function Seondslider() {
               className="w-[15px] h-[15px] mr-[15px]"
             />
 
-            <h5 className="text-white text-[15px]">Buy Now, Pay Later</h5>
+            <h5 className="text-white text-[15px]">Buy Now,Pay Later</h5>
           </div>
         </div>
       </div>
