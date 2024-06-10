@@ -47,7 +47,7 @@ export default function Seondslider() {
             <img
               src="https://cdn.shopify.com/s/files/1/0553/7100/6130/files/Sezzle.png?v=1704400405"
               alt=""
-              className="w-[15px] h-[15px] mr-[15px]"
+              className="w-[15px] h-[15px] mr-[14px]"
             />
 
             <h5 className="text-white text-[15px]">Buy Now,Pay Later</h5>
