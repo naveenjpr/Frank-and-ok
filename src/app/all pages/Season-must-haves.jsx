@@ -51,24 +51,26 @@ export default function Seasonmusthaves() {
   return (
     <div className="w-[100%]">
       <div className="flex justify-between px-[20px] mb-[50px]">
-        <h1 className="text-[35px] font-[600]">Season's must-haves</h1>
-        <div className="flex justify-end text-[35px] font-[600]">
+        <h1 className="md:text-[35px] text-[16px] font-[600]">
+          Season's must-haves
+        </h1>
+        <div className="flex justify-end md:text-[35px] text-[15px] gap-4 font-[600]">
           <button
             onClick={() => handleCategoryChange("women")}
-            className={`px-4 py-2 mx-2 rounded ${
+            className={`md:px-4 md:py-2 md:mx-2 px-[5px] rounded ${
               category === "women"
-                ? "bg-blue-500 text-white"
-                : "bg-gray-200 text-black"
+                ? "bg-blue-500 text-white text-[10px]"
+                : "bg-gray-200 text-black text-[10px]"
             }`}
           >
             Women's
           </button>
           <button
             onClick={() => handleCategoryChange("men")}
-            className={`px-4 py-2 mx-2 rounded ${
+            className={`md:px-4 md:py-2 md:mx-2 px-[5px] rounded ${
               category === "men"
-                ? "bg-blue-500 text-white"
-                : "bg-gray-200 text-black"
+                ? "bg-blue-500 text-white text-[10px]"
+                : "bg-gray-200 text-black text-[10px]"
             }`}
           >
             Men's
@@ -76,15 +78,15 @@ export default function Seasonmusthaves() {
         </div>
       </div>
       {category == "women" ? (
-        <div className="grid grid-cols-4 px-[25px] gap-[20px]">
+        <div className="grid md:grid-cols-4 grid-cols-2 px-[25px] gap-[20px]">
           {catimages.map((v, i) => {
             console.log(v)
             return (
               <div className="border relative group p-[2px]">
-                <Image src={seasons1} className="w-[100%] h-[100%]" />
+                <Image src={seasons1} className="w-[100%] max-h-[100%]" />
                 <Image
                   src={seasons2}
-                  className="w-[100%] h-[100%] absolute top-0 hidden group-hover:block duration-200"
+                  className="w-[100%] max-h-[100%] absolute top-0 hidden group-hover:block duration-200"
                 />
                 <span className="bg-black text-white absolute right-1 top-1 p-[3px] ">
                   New
