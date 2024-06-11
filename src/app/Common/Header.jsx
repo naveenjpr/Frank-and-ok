@@ -97,7 +97,7 @@ export default function Header() {
         <div className="w-[100%] bg-slate-50 ">
           <div className="grid grid-cols-[50%_35%]  justify-between px-[12px] relative items-center">
             <div className="">
-              <ul className="flex items-center justify-around      ">
+              <ul className="flex items-center justify-around       ">
                 <li>
                   <Image
                     src={logo} // Path to your image
@@ -105,10 +105,10 @@ export default function Header() {
                     className="w-[120px] bg-white h-[35px]"
                   />
                 </li>
-                <li className="group py-[12px] ">
+                <li className="group py-[12px] cursor-pointer ">
                   <h2 className="font-[700]">Women</h2>
-                  <div className="w-[100%] hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
-                    <div className=" w-[95%] mx-auto grid grid-cols-[60%_auto]">
+                  <div className="w-[100%]  bg-white h-auto  hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
+                    <div className=" w-[95%] mx-auto grid grid-cols-[60%_auto] pb-[10px]">
                       <div className="">
                         <div className="grid grid-cols-3">
                           <div>
@@ -184,10 +184,10 @@ export default function Header() {
                     </div>
                   </div>
                 </li>
-                <li className="group py-[12px]">
+                <li className="group py-[12px] cursor-pointer">
                   <h2 className="font-[700] ">Men</h2>
-                  <div className="w-[100%] hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
-                    <div className=" w-[95%] mx-auto grid grid-cols-[60%_auto]">
+                  <div className="w-[100%]   bg-white h-auto  hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
+                    <div className=" w-[95%] mx-auto grid grid-cols-[60%_auto] pb-[10px]">
                       <div className="">
                         <div className="grid grid-cols-3">
                           <div>
@@ -262,10 +262,10 @@ export default function Header() {
                     </div>
                   </div>
                 </li>
-                <li className="group py-[12px]">
+                <li className="group py-[12px] cursor-pointer">
                   <h2 className="font-[700] ">Sale</h2>
-                  <div className="w-[100%] hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
-                    <div className=" w-[95%] mx-auto grid grid-cols-1">
+                  <div className="w-[100%] bg-white  min-h-[400px] hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
+                    <div className=" w-[95%] mx-auto grid grid-cols-1 pb-[10px]">
                       <div className="">
                         <div className="grid grid-cols-4 justify-between">
                           <div>
@@ -322,11 +322,11 @@ export default function Header() {
                     </div>
                   </div>
                 </li>
-                <li className=" group py-[12px]">
+                <li className=" group py-[12px] cursor-pointer">
                   {" "}
-                  <h2 className="font-[700]">Our Story</h2>
-                  <div className="w-[100%] hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
-                    <div className="grid grid-cols-6 gap-[30px] justify-between px-[12px]">
+                  <h2 className="font-[700] ">Our Story</h2>
+                  <div className="w-[100%] bg-white min-h-[400px]  hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
+                    <div className="grid grid-cols-6 gap-[30px] justify-between px-[12px] pb-[10px]">
                       <div className="border-[2px] border-[solid]">
                         <Image src={first} className="w-[100%] h-[300px]" />
                       </div>
@@ -413,7 +413,7 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="w-[100%]  md:hidden block relative  ">
+        <div className="w-[100%]  md:hidden block relative z-[999]  ">
           <nav className="bg-gray-800 p-4">
             <div className="container mx-auto flex flex-col relative ">
               <Link href="/">
@@ -452,11 +452,11 @@ export default function Header() {
                   show ? "block" : "hidden"
                 } `}
               >
-                <ul className="flex flex-col items-center justify-around      ">
+                <ul className="flex flex-col items-center justify-around    ">
                   <li className="group py-[12px] ">
-                    <h2 className="font-[700]">Women</h2>
-                    <div className="w-[100%] hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
-                      <div className=" w-[95%] mx-auto grid grid-cols-1">
+                    <h2 className="font-[700] cursor-pointer">Women</h2>
+                    <div className="w-[100%] hidden group-hover:block duration-300 origin-top bg-white    absolute left-0 top-[100%]">
+                      <div className=" w-[95%] mx-auto grid grid-cols-1 pb-[10px]">
                         <div className="">
                           <div className="grid grid-cols-3">
                             <div>
@@ -532,10 +532,10 @@ export default function Header() {
                       </div>
                     </div>
                   </li>
-                  <li className="group py-[12px]">
-                    <h2 className="font-[700] ">Men</h2>
-                    <div className="w-[100%] hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
-                      <div className=" w-[95%] mx-auto grid grid-cols-1">
+                  <li className="group py-[12px] cursor-pointer">
+                    <h2 className="font-[700]  ">Men</h2>
+                    <div className="w-[100%] hidden group-hover:block duration-300 origin-top bg-white    absolute left-0 top-[100%]">
+                      <div className=" w-[95%] mx-auto grid grid-cols-1 pb-[10px]">
                         <div className="">
                           <div className="grid grid-cols-3">
                             <div>
@@ -610,10 +610,10 @@ export default function Header() {
                       </div>
                     </div>
                   </li>
-                  <li className="group py-[12px]">
+                  <li className="group py-[12px] cursor-pointer">
                     <h2 className="font-[700] ">Sale</h2>
-                    <div className="w-[100%] hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
-                      <div className=" w-[95%] mx-auto grid grid-cols-1">
+                    <div className="w-[100%] hidden group-hover:block duration-300 origin-top bg-white   absolute left-0 top-[100%]">
+                      <div className=" w-[95%] mx-auto grid grid-cols-1 pb-[10px]">
                         <div className="">
                           <div className="grid grid-cols-4 justify-between items-center">
                             <div>
@@ -670,11 +670,11 @@ export default function Header() {
                       </div>
                     </div>
                   </li>
-                  <li className=" group py-[12px]">
+                  <li className=" group py-[12px] cursor-pointer">
                     {" "}
                     <h2 className="font-[700]">Our Story</h2>
-                    <div className="w-[100%] hidden mt-[20px] group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
-                      <div className="grid grid-cols-3 gap-[10px]  items-center justify-between ">
+                    <div className="w-[100%] hidden mt-[20px] group-hover:block duration-300 origin-top bg-white   absolute left-0 top-[100%]">
+                      <div className="grid grid-cols-3 gap-[10px]  items-center justify-between pb-[10px] ">
                         <div className="border-[2px] border-[solid]">
                           <Image
                             src={first}

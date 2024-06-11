@@ -18,7 +18,24 @@ export default function Seondslider() {
   }
   return (
     <>
-      <div className="w-[100%] content-auto h-screen bg-center	"></div>
+      <div className="w-[100%] content-auto h-[400px] bg-center relative -z-[999]	">
+        <div className=" flex flex-col justify-center items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
+          <span className="md:text-[55px] text-[27px] text-white">
+            A Mallorca Story
+          </span>
+          <span className="md:text-[34px] text-[17px] text-white my-[30px]">
+            Summer 2024
+          </span>
+          <div className="flex gap-[20px] ">
+            <button className="bg-white text-black md:px-[70px] px-[35px] py-[15px]">
+              Women
+            </button>
+            <button className="bg-white text-black md:px-[70px] px-[35px] py-[15px]">
+              men
+            </button>
+          </div>
+        </div>
+      </div>
       <div className="w-[100%] bg-black ">
         <div className="w-[80%] mx-auto grid grid-cols-4 items-center justify-between py-[20px] text-white">
           <div className="flex items-center  ">
