@@ -80,7 +80,6 @@ export default function Seasonmusthaves() {
       {category == "women" ? (
         <div className="grid md:grid-cols-4 grid-cols-2 px-[25px] gap-[20px]">
           {catimages.map((v, i) => {
-            console.log(v)
             return (
               <div className="border relative group p-[2px]">
                 <Image src={seasons1} className="w-[100%] max-h-[100%]" />

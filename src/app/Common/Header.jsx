@@ -36,6 +36,7 @@ import Home from "../page"
 import Seondslider from "../all pages/Seondslider"
 import FeaturedCategories from "../all pages/FeaturedCategories"
 import Seasonmusthaves from "../all pages/Season-must-haves"
+import Fabricofsummer from "../all pages/Fabricofsummer"
 
 export default function Header() {
   const [show, setshow] = useState(false)
@@ -720,6 +721,7 @@ export default function Header() {
       <Seondslider />
       <FeaturedCategories />
       <Seasonmusthaves />
+      <Fabricofsummer />
     </>
   )
 }
