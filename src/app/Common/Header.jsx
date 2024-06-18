@@ -274,7 +274,10 @@ export default function Header() {
                   </div>
                 </li>
                 <li className="group py-[12px] cursor-pointer">
-                  <h2 className="font-[700] ">Sale</h2>
+                  <Link href="/Sale">
+                    <span className="font-[700]">Sale</span>
+                  </Link>
+
                   <div className="w-[100%] bg-white  min-h-[400px] hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
                     <div className=" w-[95%] mx-auto grid grid-cols-1 pb-[10px]">
                       <div className="">
@@ -336,7 +339,7 @@ export default function Header() {
                 <li className=" group py-[12px] cursor-pointer">
                   {" "}
                   <h2 className="font-[700] ">
-                    <Link href={"/our-Story"}>Our Story</Link>
+                    <Link href="/our-story">Our Story</Link>
                   </h2>
                   <div className="w-[100%] bg-white min-h-[400px]  hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
                     <div className="grid grid-cols-6 gap-[30px] justify-between px-[12px] pb-[10px]">
