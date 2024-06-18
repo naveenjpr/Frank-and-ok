@@ -1,13 +1,11 @@
 "use client"
 import Image from "next/image"
 import { CiHeart } from "react-icons/ci"
-
-import React, { useState } from "react"
 import seasons1 from "../../../public/seasons1.jpg"
-
 import seasons2 from "../../../public/seasonovarlay1.jpg"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import { useState } from "react"
 
 export default function Seasonmusthaves() {
   const [category, setCategory] = useState("women")
