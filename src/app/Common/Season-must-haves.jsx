@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image"
 import { CiHeart } from "react-icons/ci"
 
@@ -7,14 +8,6 @@ import seasons1 from "../../../public/seasons1.jpg"
 import seasons2 from "../../../public/seasonovarlay1.jpg"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import Slider from "react-slick"
-
-var settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 4,
-}
 
 export default function Seasonmusthaves() {
   const [category, setCategory] = useState("women")
