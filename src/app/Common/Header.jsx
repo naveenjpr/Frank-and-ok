@@ -18,8 +18,7 @@ import four from "../../../public/four.png"
 import five from "../../../public/five.png"
 import six from "../../../public/six.png"
 import womansale from "../../../public/womansale.png"
-import { IoReorderThreeOutline } from "react-icons/io5"
-import { RxCross1 } from "react-icons/rx"
+import { FaGoogle } from "react-icons/fa"
 
 import {
   categories1,
@@ -32,15 +31,14 @@ import {
   menuItems,
 } from "./Myarray"
 import Link from "next/link"
-import Home from "../page"
-import Seondslider from "../all pages/Seondslider"
-import FeaturedCategories from "../all pages/FeaturedCategories"
-import Seasonmusthaves from "../all pages/Season-must-haves"
-import Fabricofsummer from "../all pages/Fabricofsummer"
+import { FaFacebookF } from "react-icons/fa"
+
+import loginlogo from "../../../public/loginlogo.png"
 
 export default function Header() {
   const [show, setshow] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
+  const [loginmodal, setloginmodal] = useState(false)
 
   let Dropdown = () => {
     setIsOpen(!isOpen)
@@ -48,6 +46,12 @@ export default function Header() {
 
   const toggleNavbar = () => {
     setshow(!show)
+  }
+  let modalshow = (v, i) => {
+    if (i == 1) {
+      setloginmodal(!loginmodal)
+      // alert("hello")
+    }
   }
   return (
     <>
@@ -100,14 +104,18 @@ export default function Header() {
             <div className="">
               <ul className="flex items-center justify-around       ">
                 <li>
-                  <Image
-                    src={logo} // Path to your image
-                    alt="Description of image"
-                    className="w-[120px] bg-white h-[35px]"
-                  />
+                  <Link href="/">
+                    <Image
+                      src={logo} // Path to your image
+                      alt="Description of image"
+                      className="w-[120px] bg-white h-[35px]"
+                    />
+                  </Link>
                 </li>
                 <li className="group py-[12px] cursor-pointer ">
-                  <h2 className="font-[700]">Women</h2>
+                  <Link href="/women">
+                    <span className="font-[700]">Women</span>
+                  </Link>
                   <div className="w-[100%]  bg-white h-auto  hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
                     <div className=" w-[95%] mx-auto grid grid-cols-[60%_auto] pb-[10px]">
                       <div className="">
@@ -186,7 +194,9 @@ export default function Header() {
                   </div>
                 </li>
                 <li className="group py-[12px] cursor-pointer">
-                  <h2 className="font-[700] ">Men</h2>
+                  <h2 className="font-[700] ">
+                    <Link href="/men">Men</Link>
+                  </h2>
                   <div className="w-[100%]   bg-white h-auto  hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
                     <div className=" w-[95%] mx-auto grid grid-cols-[60%_auto] pb-[10px]">
                       <div className="">
@@ -325,7 +335,9 @@ export default function Header() {
                 </li>
                 <li className=" group py-[12px] cursor-pointer">
                   {" "}
-                  <h2 className="font-[700] ">Our Story</h2>
+                  <h2 className="font-[700] ">
+                    <Link href={"/our-Story"}>Our Story</Link>
+                  </h2>
                   <div className="w-[100%] bg-white min-h-[400px]  hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
                     <div className="grid grid-cols-6 gap-[30px] justify-between px-[12px] pb-[10px]">
                       <div className="border-[2px] border-[solid]">
@@ -355,15 +367,131 @@ export default function Header() {
             <div className="">
               <ul className="flex justify-end  font-[600]  text-[30px] ">
                 {icons.map((v, i) => {
+                  // console.log(v)
                   return (
                     <>
-                      <li className="pr-[30px]" key={i}>
+                      <li
+                        className="pr-[30px] cursor-pointer"
+                        key={i}
+                        onClick={() => modalshow(v, i)}
+                      >
                         {v.component}
                       </li>
                     </>
                   )
                 })}
               </ul>
+              <div
+                className={`w-[700px] duration-500 bg-white h-[500px] fixed left-[50%] top-[-1000px] translate-x-[-50%] translate-y-[-50%] z-[999] ${
+                  loginmodal == true ? "top-[50%]" : ""
+                } `}
+              >
+                <div className="w-[100%] h-[100%] overflow-auto px-[12px] relative">
+                  <span
+                    className="absolute right-0 top-0 text-[25px] cursor-pointer hover:text-[red]"
+                    onClick={() => setloginmodal(!loginmodal)}
+                  >
+                    x
+                  </span>
+                  <p className="text-[26px] text-center font-[400]">
+                    Welcome Back
+                  </p>
+                  <p className="mt-[10px] text-[16px] font-[400] text-center">
+                    Log in to get access to your member perks.
+                  </p>
+                  <div className="grid grid-cols-3 py-[30px]">
+                    <div className="flex flex-col items-center leading-[25px]">
+                      <div>
+                        <Image src={loginlogo} className="w-[30px] h-[30px]" />
+                      </div>
+                      <div className="font-[500] text-[12px]">
+                        Frank Rewards
+                      </div>
+                      <div className="font-[400] text-[12px]">
+                        Earn points. Get rewarded.
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-center leading-[25px]">
+                      <div>
+                        <Image src={loginlogo} className="w-[30px] h-[30px]" />
+                      </div>
+                      <div className="font-[500] text-[12px]">
+                        Frank Rewards
+                      </div>
+                      <div className="font-[400] text-[12px]">
+                        Earn points. Get rewarded.
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-center leading-[25px]">
+                      <div>
+                        <Image src={loginlogo} className="w-[30px] h-[30px]" />
+                      </div>
+                      <div className="font-[500] text-[12px]">
+                        Frank Rewards
+                      </div>
+                      <div className="font-[400] text-[12px]">
+                        Earn points. Get rewarded.
+                      </div>
+                    </div>
+                  </div>
+                  <form className="px-[12px]">
+                    <input
+                      type="email"
+                      placeholder="Email Address"
+                      className="border-[1px] border-[solid] border-[black] h-[45px] w-[100%] placeholder:px-[12px] mb-[10px]"
+                    />
+                    <div className="relative">
+                      <input
+                        type="password"
+                        placeholder="password"
+                        className="border-[1px] border-[solid] border-[black] h-[45px] w-[100%] placeholder:px-[12px] mb-[10px]"
+                      />
+                      <span className="absolute font-[600] right-2 top-2">
+                        show
+                      </span>
+                    </div>
+                    <button className="font-[700] relative mb-[10px]">
+                      Forgot Password?
+                      <span className="border-[1px] border-[solid] border-[black] absolute w-[100%] left-0 top-[100%]"></span>
+                    </button>
+                    <button className="font-[700] w-[100%] bg-black text-white py-[10px] mt-[5px]">
+                      Log In
+                    </button>
+                  </form>
+                  <p className="text-center py-[30px] font-[400]">
+                    Social login
+                  </p>
+                  <div className="grid grid-cols-2 justify-between items-center gap-[20px] px-[12px]">
+                    <div className="border-[2px] border-[solid] border-black flex justify-between items-center text-[#000000]">
+                      <div className="px-[12px]">
+                        <FaFacebookF />
+                      </div>
+                      <div className="px-[12px] font-[500] py-[15px]">
+                        Sign in with Facebook
+                      </div>
+                    </div>
+
+                    <div className="border-[2px] border-[solid] border-black flex justify-between items-center text-[#000000]">
+                      <div className="px-[12px]">
+                        <FaGoogle />
+                      </div>
+                      <div className="px-[12px] font-[500] py-[15px]">
+                        Sign in with Google
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-center py-[30px] font-[400]">
+                    Create an account
+                  </p>
+                  <p className="flex justify-center items-center pb-[30px]">
+                    Don't have an account? &nbsp;{" "}
+                    <button className=" relative">
+                      Sign up
+                      <span className="absolute top-[100%] h-[1px] bg-black left-0 w-[100%] "></span>
+                    </button>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -712,16 +840,147 @@ export default function Header() {
                       </div>
                     </div>
                   </li>
+
+                  {icons.map((v, i) => {
+                    // console.log(v)
+                    return (
+                      <>
+                        <li
+                          className="pr-[30px] flex flex-row text-[30px] text-white cursor-pointer"
+                          key={i}
+                          onClick={() => modalshow(v, i)}
+                        >
+                          {v.component}
+                        </li>
+                        <div
+                          className={`w-[350px] duration-500 bg-white h-[500px] fixed left-[50%] top-[-1000px] translate-x-[-50%] translate-y-[-50%] z-[999] ${
+                            loginmodal == true ? "top-[50%]" : ""
+                          } `}
+                        >
+                          <div className="w-[100%] h-[100%] overflow-auto  relative">
+                            <span
+                              className="absolute right-0 top-0 text-[25px] cursor-pointer hover:text-[red]"
+                              onClick={() => setloginmodal(!loginmodal)}
+                            >
+                              x
+                            </span>
+                            <p className="text-[13px] text-center font-[400]">
+                              Welcome Back
+                            </p>
+                            <p className="mt-[5px] text-[8px] font-[400] text-center">
+                              Log in to get access to your member perks.
+                            </p>
+                            <div className="grid grid-cols-3 py-[30px]">
+                              <div className="flex flex-col items-center leading-[12px]">
+                                <div>
+                                  <Image
+                                    src={loginlogo}
+                                    className="w-[30px] h-[30px]"
+                                  />
+                                </div>
+                                <div className="font-[500] text-[8px]">
+                                  Frank Rewards
+                                </div>
+                                <div className="font-[400] text-[8px]">
+                                  Earn points. Get rewarded.
+                                </div>
+                              </div>
+                              <div className="flex flex-col items-center leading-[12px]">
+                                <div>
+                                  <Image
+                                    src={loginlogo}
+                                    className="w-[30px] h-[30px]"
+                                  />
+                                </div>
+                                <div className="font-[500] text-[8px]">
+                                  Frank Rewards
+                                </div>
+                                <div className="font-[400] text-[8px]">
+                                  Earn points. Get rewarded.
+                                </div>
+                              </div>
+                              <div className="flex flex-col items-center leading-[12px]">
+                                <div>
+                                  <Image
+                                    src={loginlogo}
+                                    className="w-[30px] h-[30px]"
+                                  />
+                                </div>
+                                <div className="font-[500] text-[8px]">
+                                  Frank Rewards
+                                </div>
+                                <div className="font-[400] text-[8px]">
+                                  Earn points. Get rewarded.
+                                </div>
+                              </div>
+                            </div>
+                            <form className="px-[12px]">
+                              <input
+                                type="email"
+                                placeholder="Email Address"
+                                className="border-[1px] border-[solid] border-[black] h-[45px] w-[100%] placeholder:px-[12px] mb-[10px]"
+                              />
+                              <div className="relative">
+                                <input
+                                  type="password"
+                                  placeholder="password"
+                                  className="border-[1px] border-[solid] border-[black] h-[45px] w-[100%] placeholder:px-[12px] mb-[10px]"
+                                />
+                                <span className="absolute font-[600] right-2 top-2">
+                                  show
+                                </span>
+                              </div>
+                              <button className="font-[700] relative mb-[10px]">
+                                Forgot Password?
+                                <span className="border-[1px] border-[solid] border-[black] absolute w-[100%] left-0 top-[100%]"></span>
+                              </button>
+                              <button className="font-[700] w-[100%] bg-black text-white py-[10px] mt-[5px]">
+                                Log In
+                              </button>
+                            </form>
+                            <p className="text-center py-[15px] font-[400]">
+                              Social login
+                            </p>
+                            <div className="grid grid-cols-2 justify-between items-center gap-[10px] px-[6px]">
+                              <div className="border-[2px] border-[solid] border-black flex justify-between items-center text-[#000000]">
+                                <div className="px-[6px]">
+                                  <FaFacebookF />
+                                </div>
+                                <div className="px-[6px] font-[500] py-[8px]">
+                                  Sign in with Facebook
+                                </div>
+                              </div>
+
+                              <div className="border-[2px] border-[solid] border-black flex justify-between items-center text-[#000000]">
+                                <div className="px-[6px]">
+                                  <FaGoogle />
+                                </div>
+                                <div className="px-[6px] font-[500] py-[8px]">
+                                  Sign in with Google
+                                </div>
+                              </div>
+                            </div>
+                            <p className="text-center py-[30px] font-[400]">
+                              Create an account
+                            </p>
+                            <p className="flex justify-center items-center pb-[30px]">
+                              Don't have an account? &nbsp;{" "}
+                              <button className=" relative">
+                                Sign up
+                                <span className="absolute top-[100%] h-[1px] bg-black left-0 w-[100%] "></span>
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                      </>
+                    )
+                  })}
                 </ul>
               </div>
             </div>
           </nav>
         </div>
       </header>
-      <Seondslider />
-      <FeaturedCategories />
-      <Seasonmusthaves />
-      <Fabricofsummer />
     </>
   )
 }

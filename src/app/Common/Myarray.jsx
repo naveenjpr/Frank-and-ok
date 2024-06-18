@@ -23,7 +23,9 @@ export const links = [
 export const icons = [
   { id: 1, component: <CiSearch /> },
   { id: 2, component: <FaRegUserCircle /> },
-  { id: 3, component: <FaHeart /> },
+  { id: 3, component: <FaHeart />,'submenuName':[{
+    'subMenu':'Log in'
+  }] },
   { id: 3, component: <CiShoppingCart /> },
 ]
 

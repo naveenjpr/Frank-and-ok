@@ -18,7 +18,7 @@ export default function Seondslider() {
   }
   return (
     <>
-      <div className="w-[100%] content-auto h-[400px] bg-center relative -z-[999]	">
+      <div className="w-[100%] content-auto h-[400px]  relative -z-[999]	">
         <div className=" flex flex-col justify-center items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
           <span className="md:text-[55px] text-[27px] text-white">
             A Mallorca Story
@@ -37,16 +37,16 @@ export default function Seondslider() {
         </div>
       </div>
       <div className="w-[100%] bg-black ">
-        <div className="w-[80%] mx-auto grid grid-cols-4 items-center justify-between py-[20px] text-white">
+        <div className="md:w-[80%] w-[100%] md:px-[0px] px-[12px] mx-auto grid grid-cols-4 items-center justify-between py-[20px] text-white">
           <div className="flex items-center  ">
             <MdLocalShipping className="mr-[10px]" />
 
-            <h5 className="text-white text-[15px]">Free Shipping over $79</h5>
+            <h5 className="text-white md:text-[15px] text-[8px]">Free Shipping over $79</h5>
           </div>
           <div className="flex items-center ">
             <FiRotateCcw className="mr-[10px]" />
 
-            <h5 className="text-white text-[15px]">free returns </h5>
+            <h5 className="text-white md:text-[15px] text-[8px]">free returns </h5>
           </div>
           <div className="flex items-center ">
             <img
@@ -57,7 +57,7 @@ export default function Seondslider() {
               className="mr-[10px]"
             />
 
-            <h5 className="text-white text-[15px]">Earn Points</h5>
+            <h5 className="text-white md:text-[15px] text-[8px]">Earn Points</h5>
           </div>
 
           <div className="flex items-center ">
@@ -67,7 +67,7 @@ export default function Seondslider() {
               className="w-[15px] h-[15px] mr-[14px]"
             />
 
-            <h5 className="text-white text-[15px]">Buy Now,Pay Later</h5>
+            <h5 className="text-white md:text-[15px] text-[8px]">Buy Now,Pay Later</h5>
           </div>
         </div>
       </div>

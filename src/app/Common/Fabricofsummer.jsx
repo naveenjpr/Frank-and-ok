@@ -9,7 +9,7 @@ import Link from "next/link"
 
 export default function Fabricofsummer() {
   var settings = {
-    dots: false,
+    // dots: true,
     infinite: false,
     speed: 500,
     nextArrow: <SamplePrevArrow />,
@@ -24,7 +24,7 @@ export default function Fabricofsummer() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
+          nextArrow: <SamplePrevArrow />,
         },
       },
       {
@@ -40,6 +40,8 @@ export default function Fabricofsummer() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: true,
+          nextArrow: false,
         },
       },
     ],

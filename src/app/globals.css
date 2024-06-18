@@ -2,13 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer utilities {
   .content-auto {
     background-image: url("../../public/banner.webp");
-  
-  width: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
   }
 }
-
-
