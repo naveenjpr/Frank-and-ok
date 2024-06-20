@@ -12,7 +12,12 @@
   .content2-auto {
     background-image: url("../../public/mobile_07ed95de-6298-4061-b1bf-ef10e20312d7_1536x.webp");
     width: 100%;
-   
+    background-size: cover;
+    background-position: center;
+  }
+  .content3-auto {
+    background-image: url("../../public/desktop_e31f1f67-92f1-4a2c-87da-27bac24ad4ba_2160x.webp");
+    width: 100%;
     background-size: cover;
     background-position: center;
   }
