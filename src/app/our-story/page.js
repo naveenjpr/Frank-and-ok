@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div className="w-full  relative overflow-hidden">
+    <div className="w-full -z-[99]  relative overflow-hidden">
         <video
           class=" w-full h-full  scale-x-100 object-center "
           autoplay
