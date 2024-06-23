@@ -63,7 +63,7 @@ export default function Seondslider() {
           <div className="flex items-center ">
             <img
               src="https://cdn.shopify.com/s/files/1/0553/7100/6130/files/Sezzle.png?v=1704400405"
-              alt=""
+              alt="testing"
               className="w-[15px] h-[15px] mr-[14px]"
             />
 

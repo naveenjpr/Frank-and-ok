@@ -97,7 +97,7 @@ export default function Seasonmusthaves() {
             console.log(v)
             return (
               <>
-                <div className="border relative group">
+                <div className="border relative group" key={i}>
                   <Image
                     src={v.image1}
                     alt="testing"

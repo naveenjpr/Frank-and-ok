@@ -40,7 +40,7 @@ export default function page() {
   }
   const catimages = [
     {
-      src1: "../../../public/2120388-002.02_450x.webp",
+      src1: "/../../../public/2120388-002.02_450x.webp",
       width: 450,
       height: 300,
       alt: "Slide 1",
@@ -49,7 +49,7 @@ export default function page() {
       price: "$130",
     },
     {
-      src1: "../../../public/2120388-002.02_450x.webp",
+      src1: "/../../../public/2120388-002.02_450x.webp",
       width: 450,
       height: 300,
       alt: "Slide 1",
@@ -58,7 +58,7 @@ export default function page() {
       price: "$130",
     },
     {
-      src1: "../../../public/2120388-002.02_450x.webp",
+      src1: "/../../../public/2120388-002.02_450x.webp",
       width: 450,
       height: 300,
       alt: "Slide 1",
@@ -69,19 +69,38 @@ export default function page() {
   ]
   return (
     <>
-      <div className="w-[100%] content2-auto h-[430px]   relative -z-[999]	">
-        <div className=" flex flex-col justify-center items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
-          <span className="md:text-[55px] text-[27px] text-white">
-            A Mallorca Story
-          </span>
-          <span className="md:text-[34px] text-[17px] text-white my-[30px]">
-            Summer 2024
-          </span>
-          <div className="flex items-center justify-center  ">
-            <button className="bg-white text-black md:px-[70px] px-[35px] py-[15px] font-[600]">
-              Shop Now
-            </button>
-          </div>
+      <div className="w-full  relative overflow-hidden">
+        <video
+          class=" w-full h-full  scale-x-100 object-center "
+          autoplay
+          muted
+          loop
+          controls
+        >
+          <source
+            src="https://cdn.shopify.com/videos/c/o/v/6c828d2216314c7a8886b6e45d0050fa.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute z-10 md:top-[10px] md:left-[70px] left-[50%] top-[50%] md:translate-x-[0%] md:translate-y-[0%] translate-x-[-50%] translate-y-[-50%]">
+          <ul className="   mx-auto flex flex-col justify-between md:items-start items-center ">
+            <li className="font-[600] md:text-[44px] text-[15px] ">Dive in</li>
+            <li className="font-[900] md:text-[88px] text-[15px]">
+              THE SUMMER SALE
+            </li>
+            <li className="font-[600] md:text-[64px] text-[15px] mb-[20px] ">
+              Up to 50% off*
+            </li>
+            <li className="flex gap-[20px]">
+              <button className="bg-white md:w-[200px] w-[100px] md:py-[10px]">
+                Women
+              </button>
+              <button className="bg-white md:w-[200px] w-[100px] md:py-[10px]">
+                Men
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
       <div className="w-[100%] bg-black ">
@@ -103,7 +122,7 @@ export default function page() {
           <div className="flex items-center ">
             <img
               src="https://cdn.shopify.com/s/files/1/0553/7100/6130/files/loyalty_logo_light.png?v=1672326811"
-              alt="testing"
+              alt="tesingtesting"
               width={15}
               height={15}
               className="mr-[10px]"
@@ -117,7 +136,7 @@ export default function page() {
           <div className="flex items-center ">
             <img
               src="https://cdn.shopify.com/s/files/1/0553/7100/6130/files/Sezzle.png?v=1704400405"
-              alt=""
+              alt="tesing"
               className="w-[15px] h-[15px] mr-[14px]"
             />
 
@@ -159,6 +178,8 @@ export default function page() {
           </div>
         </div>
       </div>
+
+      {/* Season's must-haves, start */}
       <div className="w-[100%]">
         <div className="flex justify-between px-[20px] mb-[50px]">
           <h1 className="md:text-[35px] text-[16px] font-[600]">
@@ -183,7 +204,7 @@ export default function page() {
               {catimages.map((image, i) => {
                 console.log(image.src1)
                 return (
-                  <div className="">
+                  <div className="" key={i}>
                     <div className="border relative group p-[2px] mx-[10px]">
                       <img
                         src={image.src1}
@@ -200,6 +221,21 @@ export default function page() {
                         height={image.height}
                         className="absolute top-0"
                       />
+                      {/* <Image
+                        src={image.src1}
+                        alt={tesingimage.alt}
+                        width={image.width}
+                        height={image.height}
+                        className=""
+                      />
+
+                      <Image
+                        src={image.src2}
+                        alt={tesingimage.alt}
+                       width={image.width}
+                        height={image.height}
+                        className="absolute top-0"
+                      /> */}
                       <span className="bg-black text-white absolute right-1 top-1 p-[3px] ">
                         New
                       </span>
@@ -221,20 +257,22 @@ export default function page() {
           ""
         )}
       </div>
+
+      {/* Season's must-haves */}
       <div className="w-[100%] mt-[100px]">
         <div className="w-[95%] mx-auto grid md:grid-cols-2 grid-cols-1 gap-[50px] items-center">
           <div className="">
             <Image
               src={febric}
               className="w-[100%] h-[100%]"
-              alt="Picture of the author"
+              alt="tesingPicture of the author"
             />
           </div>
           <div className=" px-[10px] ">
             <div>
               <img
                 src="https://www.frankandoak.com/cdn/shop/files/Linen-black_c5d56f93-2e8a-45b3-86c7-334eddbe51d2.jpg?crop=center&height=88&v=1717534878&width=88"
-                alt=""
+                alt="tesing"
                 className="w-[50px] h-[50px] "
               />
             </div>
@@ -253,56 +291,56 @@ export default function page() {
                 <div className="">
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/2220132-2AC.01.jpg?crop=center&height=420&v=1713383298&width=314"
-                    alt=""
+                    alt="tesing"
                     className="m-[10px] w-[100%] h-[100%]"
                   />
                 </div>
                 <div className="">
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/2310163-2AC.01.jpg?crop=center&height=420&v=1712674650&width=314"
-                    alt=""
+                    alt="tesing"
                     className="m-[10px] w-[100%] h-[100%]"
                   />
                 </div>
                 <div className="">
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/2510518-2AC.03.jpg?crop=center&height=420&v=1717595352&width=314"
-                    alt=""
+                    alt="tesing"
                     className="m-[10px] w-[100%] h-[100%]"
                   />
                 </div>
                 <div className="">
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/2510518-2AC.03.jpg?crop=center&height=420&v=1717595352&width=314"
-                    alt=""
+                    alt="tesing"
                     className="m-[10px] w-[100%] h-[100%]"
                   />
                 </div>
                 <div className="">
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/2510518-2AC.03.jpg?crop=center&height=420&v=1717595352&width=314"
-                    alt=""
+                    alt="tesing"
                     className="m-[10px] w-[100%] h-[100%]"
                   />
                 </div>
                 <div className="">
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/2510518-2AC.03.jpg?crop=center&height=420&v=1717595352&width=314"
-                    alt=""
+                    alt="tesing"
                     className="m-[10px] w-[100%] h-[100%]"
                   />
                 </div>
                 <div className="">
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/2510518-2AC.03.jpg?crop=center&height=420&v=1717595352&width=314"
-                    alt=""
+                    alt="tesing"
                     className="m-[10px] w-[100%] h-[100%]"
                   />
                 </div>
                 <div className="">
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/2510518-2AC.03.jpg?crop=center&height=420&v=1717595352&width=314"
-                    alt=""
+                    alt="tesing"
                     className="m-[10px] w-[100%] h-[100%]"
                   />
                 </div>
@@ -363,7 +401,7 @@ export default function page() {
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/2120364-4LR.01.jpg?crop=center&height=880&v=1715357630&width=672"
                     className="w-[100%]"
-                    alt=""
+                    alt="tesing"
                   />
                 </div>
               </div>
@@ -407,7 +445,7 @@ export default function page() {
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/2220097-4CV.01_4c570fea-27f8-45ac-8354-202bc56f21da.jpg?crop=center&height=880&v=1713375346&width=672"
                     className="w-[100%]"
-                    alt=""
+                    alt="tesing"
                   />
                 </div>
               </div>
@@ -445,7 +483,7 @@ export default function page() {
                 <img
                   src="https://www.frankandoak.com/cdn/shop/files/Tile_desktop_2_900x.jpg?v=1712334213"
                   className="w-[100%] h-[280px]"
-                  alt=""
+                  alt="tesing"
                 />
                 <h5 className="absolute text-white bottom-[30px] left-[50%] translate-x-[-50%] w-[205px] text-[20px]  ">
                   Sustainable Practices
@@ -455,7 +493,7 @@ export default function page() {
                 <img
                   src="https://www.frankandoak.com/cdn/shop/files/Tile_desktop_2_900x.jpg?v=1712334213"
                   className="w-[100%] h-[280px]"
-                  alt=""
+                  alt="tesing"
                 />
                 <h5 className="absolute text-white bottom-[30px] left-[50%] translate-x-[-50%] w-[205px] text-[20px]  ">
                   Sustainable Practices
@@ -465,7 +503,7 @@ export default function page() {
                 <img
                   src="https://www.frankandoak.com/cdn/shop/files/Tile_desktop_2_900x.jpg?v=1712334213"
                   className="w-[100%] h-[280px]"
-                  alt=""
+                  alt="tesing"
                 />
                 <h5 className="absolute text-white bottom-[30px] left-[50%] translate-x-[-50%] w-[205px] text-[20px]  ">
                   Sustainable Practices
@@ -475,7 +513,7 @@ export default function page() {
                 <img
                   src="https://www.frankandoak.com/cdn/shop/files/Tile_desktop_2_900x.jpg?v=1712334213"
                   className="w-[100%] h-[280px]"
-                  alt=""
+                  alt="tesing"
                 />
                 <h5 className="absolute text-white bottom-[30px] left-[50%] translate-x-[-50%] w-[205px] text-[20px]  ">
                   Sustainable Practices

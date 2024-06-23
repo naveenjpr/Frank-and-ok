@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="flex flex-col items-center text-center ">
           <img
             src="https://www.frankandoak.com/cdn/shop/files/Shipping-black_2_40x.png?v=1657555435"
-            alt=""
+            alt="testing"
             className="w-[50px] h-[40px] "
           />
           <div className="md:py-[15px] md:text-[20px] text-[10px] py-[5px]">
@@ -28,7 +28,7 @@ export default function Footer() {
         <div className="flex flex-col items-center text-center">
           <img
             src="https://www.frankandoak.com/cdn/shop/files/Returns-black_6defe504-0961-4e6b-9c71-70f44686eaa1_40x.png?v=1668024666"
-            alt=""
+            alt="testing"
             className="w-[50px] h-[40px] "
           />
           <div className="md:py-[15px] md:text-[20px] text-[10px] py-[5px]">
@@ -41,7 +41,7 @@ export default function Footer() {
         <div className="flex flex-col items-center text-center ">
           <img
             src="https://www.frankandoak.com/cdn/shop/files/loyalty_logo_light_40x.png?v=1672328644"
-            alt=""
+            alt="testing"
             className="w-[50px] h-[40px] "
           />
           <div className="md:py-[15px] md:text-[20px] text-[10px] py-[5px]">
@@ -54,7 +54,7 @@ export default function Footer() {
         <div className="flex flex-col items-center text-center">
           <img
             src="https://www.frankandoak.com/cdn/shop/files/Sezzle_40x.png?v=1704401097"
-            alt=""
+            alt="testing"
             className="w-[50px] h-[40px] "
           />
           <div className="md:py-[15px] md:text-[20px] text-[10px] py-[5px]">
@@ -71,7 +71,7 @@ export default function Footer() {
           <Image
             src={footerlogo}
             className="w-[80%] h-[40%] mb-[10px]"
-            alt=""
+            alt="testing"
           />
           <div className="flex gap-[20px] flex-wrap">
             <CiInstagram className="w-[24px] h-[28px]" />
@@ -85,7 +85,7 @@ export default function Footer() {
             <Image
               src={certified}
               className="w-[40px] h-[67px] mb-[10px]"
-              alt=""
+              alt="testing"
             />
           </div>
         </div>
@@ -195,8 +195,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="w-[93%] mx-auto">
-        <ul class="text-[14px] pb-[60px]">
-          <li class="">© Frank And Oak 2024 , All Rights Reserved.</li>
+        <ul className="text-[14px] pb-[60px]">
+          <li className="">© Frank And Oak 2024 , All Rights Reserved.</li>
         </ul>
       </div>
     </div>

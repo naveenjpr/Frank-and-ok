@@ -34,6 +34,7 @@ import Link from "next/link"
 import { FaFacebookF } from "react-icons/fa"
 
 import loginlogo from "../../../public/loginlogo.png"
+import Login from "./Login"
 
 export default function Header() {
   const [show, setshow] = useState(false)
@@ -58,8 +59,8 @@ export default function Header() {
       <header className="w-[100%] md:block hidden	">
         <div className="bg-black w-[100%] ">
           <div className="w-[95%]  mx-auto">
-            <div className="grid grid-cols-[78%_auto] justify-center items-center text-white py-[20px]">
-              <div className="border border-[solid] border-[#88d352] mx-[20px] ">
+            <div className="grid grid-cols-[78%_auto] justify-center items-center text-white py-[10px]">
+              <div className=" mx-[20px] ">
                 <SlickSlider />
               </div>
               <div className="border border-[solid] border-[#4c2985] flex  items-center ms-[20px] px-[20px] ">
@@ -437,30 +438,10 @@ export default function Header() {
                       </div>
                     </div>
                   </div>
-                  <form className="px-[12px]">
-                    <input
-                      type="email"
-                      placeholder="Email Address"
-                      className="border-[1px] border-[solid] border-[black] h-[45px] w-[100%] placeholder:px-[12px] mb-[10px]"
-                    />
-                    <div className="relative">
-                      <input
-                        type="password"
-                        placeholder="password"
-                        className="border-[1px] border-[solid] border-[black] h-[45px] w-[100%] placeholder:px-[12px] mb-[10px]"
-                      />
-                      <span className="absolute font-[600] right-2 top-2">
-                        show
-                      </span>
-                    </div>
-                    <button className="font-[700] relative mb-[10px]">
-                      Forgot Password?
-                      <span className="border-[1px] border-[solid] border-[black] absolute w-[100%] left-0 top-[100%]"></span>
-                    </button>
-                    <button className="font-[700] w-[100%] bg-black text-white py-[10px] mt-[5px]">
-                      Log In
-                    </button>
-                  </form>
+                  {/* login logic start */}
+                  <Login />
+                  {/* login logic end */}
+
                   <p className="text-center py-[30px] font-[400]">
                     Social login
                   </p>

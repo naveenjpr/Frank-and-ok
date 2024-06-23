@@ -17,6 +17,14 @@ import Tile from "../../../public/Tile_desktop_2_900x.webp"
 import Tile2 from "../../../public/story-design_900x (1).jpg"
 import Tile3 from "../../../public/Tile_desktop_3_900x.jpg"
 import Tile4 from "../../../public/story-partners_900x.webp"
+import MenImage1 from "../../../public/1130347-5IN.01_450x.webp"
+import MenImage2 from "../../../public/110728-2HC.01_450x.webp"
+import MenImage3 from "../../../public/1220154-616.02_450x.webp"
+import MenImage4 from "../../../public/1110378-229.01_450x.webp"
+import secondMenImage1 from "../../../public/0C2A9560_450x (1).webp"
+import secondMenImage2 from "../../../public/110728-2HC.02_450x.webp"
+import secondMenImage3 from "../../../public/1220154-616.01_450x.webp"
+import secondMenImage4 from "../../../public/1110378-229.02_450x.webp"
 
 import { MdLocalShipping } from "react-icons/md"
 import Slider from "react-slick"
@@ -43,49 +51,73 @@ export default function page() {
   }
   const catimages = [
     {
-      src1: "../../../public/2120388-002.02_450x.webp",
+      src1: MenImage1,
       width: 450,
       height: 300,
       alt: "Slide 1",
-      src2: "../../../public/2120388-002.01_450x.webp",
+      src2: secondMenImage1,
       para: "The Open Back Poplin Maxi Dress in Sepia",
       price: "$130",
     },
     {
-      src1: "../../../public/2120388-002.02_450x.webp",
+      src1: MenImage2,
       width: 450,
       height: 300,
       alt: "Slide 1",
-      src2: "../../../public/2120388-002.01_450x.webp",
+      src2: secondMenImage2,
       para: "The Open Back Poplin Maxi Dress in Sepia",
       price: "$130",
     },
     {
-      src1: "../../../public/2120388-002.02_450x.webp",
+      src1: MenImage3,
       width: 450,
       height: 300,
       alt: "Slide 1",
-      src2: "../../../public/2120388-002.01_450x.webp",
+      src2: secondMenImage3,
+      para: "The Open Back Poplin Maxi Dress in Sepia",
+      price: "$130",
+    },
+    {
+      src1: MenImage4,
+      width: 450,
+      height: 300,
+      alt: "Slide 1",
+      src2: secondMenImage4,
       para: "The Open Back Poplin Maxi Dress in Sepia",
       price: "$130",
     },
   ]
   return (
     <>
-      <div className="w-[100%] content3-auto h-[430px]   relative -z-[999]	">
-        <div className=" flex flex-col justify-center items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
-          <span className="md:text-[55px] text-[27px] text-white">
-            A Mallorca Story
-          </span>
-          <span className="md:text-[34px] text-[17px] text-white my-[30px]">
-            Summer 2024
-          </span>
-          <div className="flex items-center justify-center  ">
-            <button className="bg-white text-black md:px-[70px] px-[35px] py-[15px] font-[600]">
-              Shop Now
-            </button>
-          </div>
-        </div>
+        {/* <div class="video__inner pos-center js-video hero-video-slide is-loaded"><ul class="video__controls js-controls absolute f jcs z10" data-showing-controls="false"><li class="video__btn js-toggle-play f aic pointer"><span class="video__btn__pause f aic" role="button" aria-label="Pause"><svg class="w1" viewBox="0 0 34 34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-pause" x="0" y="0"></use></svg></span><span class="video__btn__play f aic" role="button" aria-label="Play"><svg class="w1" viewBox="0 0 34 34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play" x="0" y="0"></use></svg></span></li></ul><video class="video__el js-video" aria-label="Up to 50% off*" data-src="https://cdn.shopify.com/videos/c/o/v/6c828d2216314c7a8886b6e45d0050fa.mp4" autoplay="" loop="" preload="auto" playsinline="" src="https://cdn.shopify.com/videos/c/o/v/6c828d2216314c7a8886b6e45d0050fa.mp4" style="height: 100%; width: auto;"></video></div> */}
+      <div className="w-full h-[500px] relative border-[2px] border-[solid] border-[red] overflow-hidden ">
+        <video
+          class=" w-full h-[100%] scale-x-125 object-center
+
+          origin-center "
+          autoplay
+          loop
+          controls
+        >
+          <source
+            src="https://cdn.shopify.com/videos/c/o/v/4c086d5147ea485495fbc749ada2b8d0.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+          {/* <div className=" flex flex-col justify-center items-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] ">
+            <span className="md:text-[55px] text-[27px] text-white">
+              A Mallorca Story
+            </span>
+            <span className="md:text-[34px] text-[17px] text-white my-[30px]">
+              Summer 2024
+            </span>
+            <div className="flex items-center justify-center  ">
+              <button className="bg-white text-black md:px-[70px] px-[35px] py-[15px] font-[600]">
+                Shop Now
+              </button>
+            </div>
+          </div> */}
+        </video>
       </div>
       <div className="w-[100%] bg-black ">
         <div className="md:w-[80%] w-[100%] md:px-[0px] px-[12px] mx-auto grid grid-cols-4 items-center justify-between py-[20px] text-white">
@@ -120,7 +152,7 @@ export default function page() {
           <div className="flex items-center ">
             <img
               src="https://cdn.shopify.com/s/files/1/0553/7100/6130/files/Sezzle.png?v=1704400405"
-              alt=""
+              alt="testing"
               className="w-[15px] h-[15px] mr-[14px]"
             />
 
@@ -182,28 +214,33 @@ export default function page() {
           </div>
         </div>
         {category == "men" ? (
-          <div className="w-[95%] mx-auto slider-container">
+          <div className="w-[95%] mx-auto ">
             <Slider {...settings}>
               {catimages.map((image, i) => {
                 console.log(image.src1)
                 return (
-                  <div className="">
-                    <div className="border relative group p-[2px] mx-[10px]">
-                      <img
-                        src={image.src1}
-                        alt={image.alt}
-                        width={image.width}
-                        height={image.height}
-                        className=""
-                      />
+                  <>
+                    <div className="border p-[2px] mx-[10px] relative" key={i}>
+                      <div className="relative group duration-1000 ">
+                        <Image
+                          src={image.src1.src}
+                          alt={image.alt}
+                          width={image.width}
+                          height={image.height}
+                          className=""
+                        />
 
-                      <img
-                        src={image.src2}
-                        alt={image.alt}
-                        width={image.width}
-                        height={image.height}
-                        className="absolute top-0"
-                      />
+                        <Image
+                          src={image.src2.src}
+                          alt={image.alt}
+                          width={image.width}
+                          height="100"
+                          className="absolute top-0 scale-0 group-hover:scale-100 h-[100%] "
+                        />
+                        <button className="bg-white w-[95%] left-2 h-[50px] text-black absolute bottom-2 scale-0 group-hover:scale-100  ">
+                          Quick Add
+                        </button>
+                      </div>
                       <span className="bg-black text-white absolute right-1 top-1 p-[3px] ">
                         New
                       </span>
@@ -216,7 +253,7 @@ export default function page() {
                       <div className="flex  ">{image.price}</div>
                       <div className="flex text-[#ccc] ">1 color</div>
                     </div>
-                  </div>
+                  </>
                 )
               })}
             </Slider>
@@ -240,7 +277,7 @@ export default function page() {
             <div>
               <img
                 src="https://www.frankandoak.com/cdn/shop/files/Linen-black_c5d56f93-2e8a-45b3-86c7-334eddbe51d2.jpg?crop=center&height=88&v=1717534878&width=88"
-                alt=""
+                alt="testing"
                 className="w-[50px] h-[50px] "
               />
             </div>
@@ -259,56 +296,56 @@ export default function page() {
                 <div className="">
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/1220157-101.01.jpg?crop=center&height=420&v=1717430505&width=314"
-                    alt=""
+                    alt="testing"
                     className="m-[10px] w-[100%] h-[100%]"
                   />
                 </div>
                 <div className="">
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/1120924-5FR.01.jpg?crop=center&height=420&v=1713473346&width=314"
-                    alt=""
+                    alt="testing"
                     className="m-[10px] w-[100%] h-[100%]"
                   />
                 </div>
                 <div className="">
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/1120923-213.01.jpg?crop=center&height=420&v=1713451721&width=314"
-                    alt=""
+                    alt="testing"
                     className="m-[10px] w-[100%] h-[100%]"
                   />
                 </div>
                 <div className="">
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/1110709-017.01.jpg?crop=center&height=420&v=1712759468&width=314"
-                    alt=""
+                    alt="testing"
                     className="m-[10px] w-[100%] h-[100%]"
                   />
                 </div>
                 <div className="">
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/2510518-2AC.03.jpg?crop=center&height=420&v=1717595352&width=314"
-                    alt=""
+                    alt="testing"
                     className="m-[10px] w-[100%] h-[100%]"
                   />
                 </div>
                 <div className="">
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/2510518-2AC.03.jpg?crop=center&height=420&v=1717595352&width=314"
-                    alt=""
+                    alt="testing"
                     className="m-[10px] w-[100%] h-[100%]"
                   />
                 </div>
                 <div className="">
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/2510518-2AC.03.jpg?crop=center&height=420&v=1717595352&width=314"
-                    alt=""
+                    alt="testing"
                     className="m-[10px] w-[100%] h-[100%]"
                   />
                 </div>
                 <div className="">
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/2510518-2AC.03.jpg?crop=center&height=420&v=1717595352&width=314"
-                    alt=""
+                    alt="testing"
                     className="m-[10px] w-[100%] h-[100%]"
                   />
                 </div>
@@ -369,7 +406,7 @@ export default function page() {
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/1110378-229.01.jpg?crop=center&height=880&v=1715195739&width=672"
                     className="w-[100%]"
-                    alt=""
+                    alt="testing"
                   />
                 </div>
               </div>
@@ -413,7 +450,7 @@ export default function page() {
                   <img
                     src="https://www.frankandoak.com/cdn/shop/files/1210461-400.7839.jpg?crop=center&height=880&v=1707257398&width=672"
                     className="w-[100%]"
-                    alt=""
+                    alt="testing"
                   />
                 </div>
               </div>
@@ -448,25 +485,41 @@ export default function page() {
             </div>
             <div className="grid md:grid-cols-2 grid-cols-1 gap-[20px]">
               <div className="relative">
-                <Image src={Tile} className="w-[100%] h-[280px]" alt="" />
+                <Image
+                  src={Tile}
+                  className="w-[100%] h-[280px]"
+                  alt="testing"
+                />
                 <h5 className="absolute text-white bottom-[30px] left-[50%] translate-x-[-50%] w-[205px] text-[20px]  ">
                   Sustainable Practices
                 </h5>
               </div>
               <div className="relative">
-                <Image src={Tile2} className="w-[100%] h-[280px]" alt="" />
+                <Image
+                  src={Tile2}
+                  className="w-[100%] h-[280px]"
+                  alt="testing"
+                />
                 <h5 className="absolute text-white bottom-[30px] left-[50%] translate-x-[-50%] w-[205px] text-[20px]  ">
                   Sustainable Practices
                 </h5>
               </div>
               <div className="relative">
-                <Image src={Tile3} className="w-[100%] h-[280px]" alt="" />
+                <Image
+                  src={Tile3}
+                  className="w-[100%] h-[280px]"
+                  alt="testing"
+                />
                 <h5 className="absolute text-white bottom-[30px] left-[50%] translate-x-[-50%] w-[205px] text-[20px]  ">
                   Sustainable Practices
                 </h5>
               </div>
               <div className="relative">
-                <Image src={Tile4} className="w-[100%] h-[280px]" alt="" />
+                <Image
+                  src={Tile4}
+                  className="w-[100%] h-[280px]"
+                  alt="testing"
+                />
                 <h5 className="absolute text-white bottom-[30px] left-[50%] translate-x-[-50%] w-[205px] text-[20px]  ">
                   Sustainable Practices
                 </h5>
