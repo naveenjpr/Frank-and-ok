@@ -14,6 +14,14 @@ import image1 from "../../../public/seasons1.jpg"
 import image2 from "../../../public/2220134-4AC.01_d8bf22a2-314e-4a66-9e3c-274d57874c37_900x.webp"
 import image3 from "../../../public/2220136-3AL.01_aa5e57c6-1091-426a-bf1a-fefdb8ae972a_900x.webp"
 import image4 from "../../../public/2130279-012.01_d82a01e5-1580-4bd2-9d9a-44d91f1dd240_900x.webp"
+import seasonwomenfirst1 from "../../../public/2510521-3AL.01_450x.webp"
+import seasonwomenfirst2 from "../../../public/2110351-4AC.01_450x.webp"
+import seasonwomenfirst3 from "../../../public/2110353-3AL.01_450x.webp"
+import seasonwomenfirst4 from "../../../public/2220097-4CV.01_4c570fea-27f8-45ac-8354-202bc56f21da_450x.webp"
+import seasonwomenback1 from "../../../public/0C2A8900_450x.webp"
+import seasonwomenback2 from "../../../public/2110351-4AC.02_450x.webp"
+import seasonwomenback3 from "../../../public/2110353-3AL.02_450x.webp"
+import seasonwomenback4 from "../../../public/2510521-3AL.01_450x.webp"
 
 import { MdLocalShipping } from "react-icons/md"
 import Slider from "react-slick"
@@ -40,29 +48,38 @@ export default function page() {
   }
   const catimages = [
     {
-      src1: "/../../../public/2120388-002.02_450x.webp",
+      src1: seasonwomenfirst1,
       width: 450,
       height: 300,
       alt: "Slide 1",
-      src2: "../../../public/2120388-002.01_450x.webp",
+      src2: seasonwomenback1,
       para: "The Open Back Poplin Maxi Dress in Sepia",
       price: "$130",
     },
     {
-      src1: "/../../../public/2120388-002.02_450x.webp",
+      src1: seasonwomenfirst2,
       width: 450,
       height: 300,
       alt: "Slide 1",
-      src2: "../../../public/2120388-002.01_450x.webp",
+      src2: seasonwomenback2,
       para: "The Open Back Poplin Maxi Dress in Sepia",
       price: "$130",
     },
     {
-      src1: "/../../../public/2120388-002.02_450x.webp",
+      src1: seasonwomenfirst3,
       width: 450,
       height: 300,
       alt: "Slide 1",
-      src2: "../../../public/2120388-002.01_450x.webp",
+      src2: seasonwomenback3,
+      para: "The Open Back Poplin Maxi Dress in Sepia",
+      price: "$130",
+    },
+    {
+      src1: seasonwomenfirst4,
+      width: 450,
+      height: 300,
+      alt: "Slide 1",
+      src2: seasonwomenback4,
       para: "The Open Back Poplin Maxi Dress in Sepia",
       price: "$130",
     },
@@ -205,37 +222,28 @@ export default function page() {
                 console.log(image.src1)
                 return (
                   <div className="" key={i}>
-                    <div className="border relative group p-[2px] mx-[10px]">
-                      <img
-                        src={image.src1}
-                        alt={image.alt}
-                        width={image.width}
-                        height={image.height}
-                        className=""
-                      />
+                    <div className=" p-[2px] mx-[10px]">
+                      <div className=" relative group duration-500 ">
+                        <img
+                          src={image.src1.src}
+                          alt={image.alt}
+                          width={image.width}
+                          height={image.height}
+                          className=""
+                        />
 
-                      <img
-                        src={image.src2}
-                        alt={image.alt}
-                        width={image.width}
-                        height={image.height}
-                        className="absolute top-0"
-                      />
-                      {/* <Image
-                        src={image.src1}
-                        alt={tesingimage.alt}
-                        width={image.width}
-                        height={image.height}
-                        className=""
-                      />
+                        <img
+                          src={image.src2.src}
+                          alt={image.alt}
+                          width={image.width}
+                          height={image.height}
+                          className="absolute top-0 scale-0 group-hover:scale-100 h-[100%]"
+                        />
+                        <button className="bg-white w-[95%] left-2 h-[50px] text-black absolute bottom-2 scale-0 group-hover:scale-100  ">
+                          Quick Add
+                        </button>
+                      </div>
 
-                      <Image
-                        src={image.src2}
-                        alt={tesingimage.alt}
-                       width={image.width}
-                        height={image.height}
-                        className="absolute top-0"
-                      /> */}
                       <span className="bg-black text-white absolute right-1 top-1 p-[3px] ">
                         New
                       </span>
