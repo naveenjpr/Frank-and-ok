@@ -35,11 +35,15 @@ import { FaFacebookF } from "react-icons/fa"
 
 import loginlogo from "../../../public/loginlogo.png"
 import Login from "./Login"
+import { usePathname } from "next/navigation"
+import { useRouter } from "next/router"
 
 export default function Header() {
   const [show, setshow] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
   const [loginmodal, setloginmodal] = useState(false)
+
+  const pathname = usePathname()
 
   let Dropdown = () => {
     setIsOpen(!isOpen)
@@ -100,25 +104,34 @@ export default function Header() {
             </div>
           </div>
         </div>
-                {/* top black area End */}
-
+        {/* top black area End */}
 
         <div className="w-[100%] bg-slate-50 ">
           <div className="grid grid-cols-[50%_35%]  justify-between px-[12px] relative items-center">
             <div className="">
               <ul className="flex items-center justify-around       ">
-                <li>
+                <li
+                  className={
+                    pathname === "/" ? "text-white bg-[blue]" : "text-gray-200"
+                  }
+                >
                   <Link href="/">
                     <Image
                       src={logo} // Path to your image
                       alt="Description of image"
-                      className="w-[120px] bg-white h-[35px]"
+                      className="w-[120px] h-[35px]"
                     />
                   </Link>
                 </li>
                 <li className="group py-[12px] cursor-pointer ">
                   <Link href="/women">
-                    <span className="font-[700]">Women</span>
+                    <span
+                      className={`font-[700]
+                       ${pathname === "/women" ? "text-[red]" : ""}
+                        `}
+                    >
+                      Women
+                    </span>
                   </Link>
                   <div className="w-[100%]  bg-white h-auto  hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
                     <div className=" w-[95%] mx-auto grid grid-cols-[60%_auto] pb-[10px]">
@@ -199,7 +212,14 @@ export default function Header() {
                 </li>
                 <li className="group py-[12px] cursor-pointer">
                   <h2 className="font-[700] ">
-                    <Link href="/men">Men</Link>
+                    <Link
+                      href="/men"
+                      className={`font-[700]
+                       ${pathname === "/men" ? "text-[red]" : ""}
+                        `}
+                    >
+                      Men
+                    </Link>
                   </h2>
                   <div className="w-[100%]   bg-white h-auto  hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
                     <div className=" w-[95%] mx-auto grid grid-cols-[60%_auto] pb-[10px]">
@@ -279,7 +299,13 @@ export default function Header() {
                 </li>
                 <li className="group py-[12px] cursor-pointer">
                   <Link href="/Sale">
-                    <span className="font-[700] text-[red]">Sale</span>
+                    <span
+                      className={`font-[700]
+                       ${pathname === "/Sale" ? "text-[red]" : ""}
+                        `}
+                    >
+                      Sale
+                    </span>
                   </Link>
 
                   <div className="w-[100%] bg-white  min-h-[400px] hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
@@ -343,7 +369,14 @@ export default function Header() {
                 <li className=" group py-[12px] cursor-pointer">
                   {" "}
                   <h2 className="font-[700] ">
-                    <Link href="/our-story">Our Story</Link>
+                    <Link
+                      href="/our-story"
+                      className={`font-[700]
+                       ${pathname === "/our-story" ? "text-[red]" : ""}
+                        `}
+                    >
+                      Our Story
+                    </Link>
                   </h2>
                   <div className="w-[100%] bg-white min-h-[400px]  hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
                     <div className="grid grid-cols-6 gap-[30px] justify-between px-[12px] pb-[10px]">
