@@ -57,6 +57,7 @@ export default function Header() {
   return (
     <>
       <header className="w-[100%] md:block hidden	">
+        {/* top black area start */}
         <div className="bg-black w-[100%] ">
           <div className="w-[95%]  mx-auto">
             <div className="grid grid-cols-[78%_auto] justify-center items-center text-white py-[10px]">
@@ -99,6 +100,8 @@ export default function Header() {
             </div>
           </div>
         </div>
+                {/* top black area End */}
+
 
         <div className="w-[100%] bg-slate-50 ">
           <div className="grid grid-cols-[50%_35%]  justify-between px-[12px] relative items-center">
@@ -276,7 +279,7 @@ export default function Header() {
                 </li>
                 <li className="group py-[12px] cursor-pointer">
                   <Link href="/Sale">
-                    <span className="font-[700]">Sale</span>
+                    <span className="font-[700] text-[red]">Sale</span>
                   </Link>
 
                   <div className="w-[100%] bg-white  min-h-[400px] hidden group-hover:block duration-300 origin-top   absolute left-0 top-[100%]">
