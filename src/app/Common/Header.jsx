@@ -575,6 +575,38 @@ export default function Header() {
                   />
                 </span>
               </Link>
+              <div className="my-[5px] ">
+                <ul className="flex bg-white w-[100%] justify-between py-[20px] items-center px-[5px] capitalize">
+                  <li
+                    className={`font-[700]
+                       ${pathname === "/Sale" ? "text-[red]" : ""}
+                        `}
+                  >
+                    <Link href="/Sale">sale</Link>
+                  </li>
+                  <li
+                    className={`font-[700]
+                       ${pathname === "/women" ? "text-[red]" : ""}
+                        `}
+                  >
+                    <Link href="/women">women</Link>
+                  </li>
+                  <li
+                    className={`font-[700]
+                       ${pathname === "/men" ? "text-[red]" : ""}
+                        `}
+                  >
+                    <Link href="/men">men</Link>
+                  </li>
+                  <li
+                    className={`font-[700]
+                       ${pathname === "/our-story" ? "text-[red]" : ""}
+                        `}
+                  >
+                    <Link href="/our-story">our story</Link>
+                  </li>
+                </ul>
+              </div>
               <div className="md:hidden absolute right-0 top-0">
                 <button
                   onClick={() => setshow(!show)}
