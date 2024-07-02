@@ -41,6 +41,34 @@ export default function page() {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ],
   }
   const settings2 = {
     dots: true,
@@ -48,6 +76,34 @@ export default function page() {
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ],
   }
   const catimages = [
     {
@@ -89,7 +145,7 @@ export default function page() {
   ]
   return (
     <>
-        {/* <div class="video__inner pos-center js-video hero-video-slide is-loaded"><ul class="video__controls js-controls absolute f jcs z10" data-showing-controls="false"><li class="video__btn js-toggle-play f aic pointer"><span class="video__btn__pause f aic" role="button" aria-label="Pause"><svg class="w1" viewBox="0 0 34 34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-pause" x="0" y="0"></use></svg></span><span class="video__btn__play f aic" role="button" aria-label="Play"><svg class="w1" viewBox="0 0 34 34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play" x="0" y="0"></use></svg></span></li></ul><video class="video__el js-video" aria-label="Up to 50% off*" data-src="https://cdn.shopify.com/videos/c/o/v/6c828d2216314c7a8886b6e45d0050fa.mp4" autoplay="" loop="" preload="auto" playsinline="" src="https://cdn.shopify.com/videos/c/o/v/6c828d2216314c7a8886b6e45d0050fa.mp4" style="height: 100%; width: auto;"></video></div> */}
+      {/* <div class="video__inner pos-center js-video hero-video-slide is-loaded"><ul class="video__controls js-controls absolute f jcs z10" data-showing-controls="false"><li class="video__btn js-toggle-play f aic pointer"><span class="video__btn__pause f aic" role="button" aria-label="Pause"><svg class="w1" viewBox="0 0 34 34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-pause" x="0" y="0"></use></svg></span><span class="video__btn__play f aic" role="button" aria-label="Play"><svg class="w1" viewBox="0 0 34 34"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-play" x="0" y="0"></use></svg></span></li></ul><video class="video__el js-video" aria-label="Up to 50% off*" data-src="https://cdn.shopify.com/videos/c/o/v/6c828d2216314c7a8886b6e45d0050fa.mp4" autoplay="" loop="" preload="auto" playsinline="" src="https://cdn.shopify.com/videos/c/o/v/6c828d2216314c7a8886b6e45d0050fa.mp4" style="height: 100%; width: auto;"></video></div> */}
       <div className="w-full -z-[99] relative overflow-hidden ">
         <video
           class=" w-full h-[100%] scale-x-100 object-center
