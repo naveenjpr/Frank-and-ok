@@ -5,7 +5,9 @@ import {
   GoogleAuthProvider,
   signInWithEmailAndPassword,
 } from "firebase/auth"
-import { app } from "@/FirebaseConfig"
+
+import { app } from "../../FirebaseConfig"
+
 export default function Login() {
   const provider = new GoogleAuthProvider()
   const auth = getAuth(app)

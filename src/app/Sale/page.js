@@ -221,7 +221,6 @@ export default function page() {
         ) : (
           <div className="grid grid-cols-4 px-[25px] gap-[20px]">
             {catimages2.map((v, i) => {
-              
               return (
                 <>
                   <div className="border relative group" key={i}>
@@ -244,6 +243,8 @@ export default function page() {
       </div>
       {/*           Forecast: Sunny all day with up to 50% off* summer styles. End
        */}
+
+       
     </>
   )
 }
