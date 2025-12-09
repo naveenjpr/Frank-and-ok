@@ -83,6 +83,7 @@ export default function Page() {
           slidesToScroll: 3,
           infinite: true,
           dots: true,
+          dots: true,
         },
       },
       {
